@@ -1,11 +1,13 @@
 package app
 
 import (
+	"fmt"
+
 	"github.com/RB-PRO/SignatureLetter/pkg/signature"
 )
 
 func Run() {
-	signature.Сonvertor(signature.People{
+	pep := signature.People{
 		Name:     "Name",
 		Working:  "Working",
 		Email:    "Email",
@@ -14,5 +16,7 @@ func Run() {
 		Image:    "Image",
 		Telegram: "Telegram",
 		Whatsapp: "Whatsapp",
-	})
+	}
+	pepHtml := pep.Сonvertor()
+	fmt.Println(pepHtml)
 }
