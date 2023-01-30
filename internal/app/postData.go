@@ -7,7 +7,6 @@ import (
 
 	"github.com/RB-PRO/SignatureLetter/pkg/imgbb"
 	"github.com/RB-PRO/SignatureLetter/pkg/signature"
-	"github.com/polds/imgbase64"
 )
 
 func Run() {
@@ -21,7 +20,10 @@ func Run() {
 		Telegram: "Telegram",
 		Whatsapp: "Whatsapp",
 	}
-	pepHtml := pep.Сonvertor()
+	pepHtml, errConvertor := pep.Сonvertor()
+	if errConvertor != nil {
+		log.Fatal(errConvertor)
+	}
 	fmt.Println(pepHtml)
 
 	// Получить API key из файла "imgbb"
@@ -32,13 +34,12 @@ func Run() {
 
 	// Создаём экземпляр клиента imgbb
 	imgb := imgbb.NewImgbbUser(imgbbAPI_key)
+
 	// Переводим локальную картинку в base64
-	//picBase64 := PictureToBase64("roma.jpeg")
-	picBase64, baseError := imgbase64.FromLocal("roma.jpeg")
+	picBase64, baseError := PicToBase64("roma.jpeg")
 	if baseError != nil {
 		log.Fatal(baseError)
 	}
-	//picBase64 = "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
 
 	// Загружаем картинку на сервер
 	respUpload, uploadError := imgb.Upload(picBase64, "Roma")
@@ -48,5 +49,4 @@ func Run() {
 	if respUpload.Status != http.StatusOK { // проверка на отрицательный ответ
 		log.Println("Ошибка:", respUpload.Error.Message)
 	}
-	fmt.Println(respUpload)
 }

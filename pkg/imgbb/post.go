@@ -2,7 +2,6 @@ package imgbb
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -18,15 +17,7 @@ func NewImgbbUser(key string) *ImgbbUser {
 	return &ImgbbUser{key}
 }
 
-// Стуктура Запроса
-type imgbbRequest struct {
-	Key   string `json:"key"`            // The API key.
-	Image string `json:"image"`          // A binary file, base64 data, or a URL for an image. (up to 32 MB)
-	Name  string `json:"name,omitempty"` // The name of the file, this is automatically detected if uploading a file with a POST and multipart / form-data
-	//Expiration int    `json:"-,omitempty"` //Enable this if you want to force uploads to be auto deleted after certain time (in seconds 60-15552000)
-}
-
-// Стуктура ответа
+// Стуктура ответа от загрузки на сервер
 type ImgbbResponse struct {
 	Data struct {
 		ID         string `json:"id"`
@@ -66,20 +57,11 @@ type ImgbbResponse struct {
 	StatusTxt string `json:"status_txt"`
 }
 
+// Функция загрузки изображения на сервер.
 func (img ImgbbUser) Upload(pictureBase64, name string) (ImgbbResponse, error) {
 	// Ответ от сервера
 	var imgbbRes ImgbbResponse
 
-	/*
-		// Подготовить данные для загрузки
-		bytesRepresentation, responseError := json.Marshal(imgbbRequest{
-			Key:   img.API_key,
-			Image: pictureBase64,
-		})
-		if responseError != nil {
-			return ImgbbResponse{}, responseError
-		}
-	*/
 	// Выполнить запрос
 	resp, responseError := http.PostForm(URL, url.Values{"key": {img.API_key}, "image": {pictureBase64}, "name": {name}})
 	if responseError != nil {
@@ -93,7 +75,7 @@ func (img ImgbbUser) Upload(pictureBase64, name string) (ImgbbResponse, error) {
 		return ImgbbResponse{}, bodyRead
 	}
 
-	fmt.Println(string(body))
+	//fmt.Println(string(body))
 
 	// Распарсить данные
 	responseErrorUnmarshal := json.Unmarshal(body, &imgbbRes)

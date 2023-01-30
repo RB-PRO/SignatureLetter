@@ -1,5 +1,10 @@
 package signature
 
+import (
+	"os"
+	"strings"
+)
+
 // Структура входных данных
 type People struct {
 	Name     string // - Имя Фамилия
@@ -7,22 +12,39 @@ type People struct {
 	Email    string // - e-mail
 	Company  string // - Компания
 	Adres    string // - Адрес
-	Image    string // - Ссылка на фото
 	Telegram string // - Ник в телеграм
-	Whatsapp string // - Номер на вотсап (79269755457 ) // https://wa.me/79269755457?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%5B%D0%98%D0%BC%D1%8F%20%D0%A4%D0%B0%D0%BC%D0%B8%D0%BB%D0%B8%D1%8F%5D!%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%5B%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%5D.
+	Whatsapp string // - Номер на вотсап (79269755457 )
+	Image    string // - Ссылка на фото
 }
 
-// #Конвертировать входные данные в html
+// # Конвертировать входные данные в html
 //
-// ###Входные данные:
+// ### Входные данные:
 // - Имя Фамилия
 // - Должность
 // - e-mail
 // - Компания
 // - Адресс
-// - Ссылка на фото
 // - Ссылка на телеграм
-// - Номер на вотсап (79269755457 ) //https://wa.me/79269755457?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%5B%D0%98%D0%BC%D1%8F%20%D0%A4%D0%B0%D0%BC%D0%B8%D0%BB%D0%B8%D1%8F%5D!%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%5B%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%5D.
-func (people People) Сonvertor() string {
-	return "<" + people.Name + "\n" + people.Email + ">"
+// - Номер на вотсап (79269755457)
+// - Ссылка на фото
+func (people People) Сonvertor() (string, error) {
+	b, errorReadFile := os.ReadFile("html") // just pass the file name
+	if errorReadFile != nil {
+		return "", errorReadFile
+	}
+
+	strHTML := string(b) // convert content to a 'string'
+
+	// Замена содержимого
+	strHTML = strings.ReplaceAll(strHTML, "[people.Name]", people.Name)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Working]", people.Working)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Email]", people.Email)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Company]", people.Company)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Adres]", people.Adres)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Image]", people.Image)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Telegram]", people.Telegram)
+	strHTML = strings.ReplaceAll(strHTML, "[people.Whatsapp]", people.Whatsapp)
+
+	return strHTML, nil
 }
