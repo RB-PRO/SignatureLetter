@@ -48,3 +48,20 @@ func (people People) Сonvertor() (string, error) {
 
 	return strHTML, nil
 }
+
+// Сохранить файл в html
+func SaveHTML(data string) error {
+
+	f, err := os.Create("sample.html")
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	_, err = f.WriteString(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
