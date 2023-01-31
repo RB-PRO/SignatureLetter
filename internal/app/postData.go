@@ -11,10 +11,10 @@ import (
 
 func Run() {
 	pep := signature.People{
-		Name:     "Name",
-		Working:  "Working",
-		Email:    "Email",
-		Company:  "Company",
+		Name:    "Name",
+		Working: "Working",
+		Email:   "Email",
+		//Company:  "Company",
 		Adres:    "Adres",
 		Image:    "Image",
 		Telegram: "Telegram",

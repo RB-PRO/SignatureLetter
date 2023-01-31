@@ -1,0 +1,118 @@
+<div style="width:500px; font-size: 14pt; font-family: Tahoma, sans-serif;">
+    <table cellspacing="0" cellpadding="0" order="0"
+        style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
+        <thead>
+            <tr>
+                <td style="width:20%"></td>
+                <td></td> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="line-height:12pt; padding-bottom:0px; width: 20%;" valign="top">
+                    <p style="text-align: center; padding-right: 2px; padding-bottom:0px; margin: 0px;">
+                        <img order="0" alt="Photo" width="100" style="max-width:100px; height:auto; margin: 10px; padding-bottom:0px;"
+                            src="[people.Image]">
+                        <br>
+                    </p>
+
+                    <div>
+                        <div style="float: left; padding-left:5px; padding-right:5px;">
+                            <a href="https://t.me/[people.Telegram]" target="_blank" rel="noopener">
+                                <img order="0" alt="Telegram"
+                                    style="border:0; height:40px; width:40px"
+                                    src="https://i.ibb.co/DKt9N9V/Telegram.png">
+                            </a>
+                        </div>
+                        <div style="float: right; padding-left:5px; padding-right:5px;">
+                            <a href="https://wa.me/[people.Whatsapp]" target="_blank" rel="noopener">
+                                <img order="0" alt="WhatsApp"
+                                    style="border:0; height:40px; width:40px"
+                                    src="https://i.ibb.co/TT91XMf/WhatsApp.png">
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td valign="top" style="FONT-FAMILY: Roboto, sans-serif; line-height:16pt; padding-bottom:0px; margin: 10px;">
+                    <p style="FONT-SIZE: 16pt; COLOR: #03b500; FONT-FAMILY: Tahoma, sans-serif; margin-bottom: 0px; padding-bottom: 10px;">
+                        <span style="FONT-SIZE: 18pt; COLOR: #1D2248; FONT-FAMILY: Roboto, sans-serif;">
+                            <strong>
+                                [people.Name]
+                            </strong>
+                        </span>
+                        <span style="FONT-SIZE: 14pt; COLOR: #1D2248;"><br>
+                            <strong>
+                                [people.Working]
+                            </strong>
+                        </span>
+                    </p>
+
+                    <span style="FONT-SIZE: 14pt;COLOR: #1D2248; line-height: 14pt;">
+                        <strong>E:</strong>
+                        <a href="mailto:[people.Email]"
+                            style="FONT-SIZE: 14pt;COLOR: #1D2248; line-height: 14pt; text-decoration: none;">
+                            <span style="FONT-SIZE: 14pt;COLOR: #1D2248; line-height: 14pt; text-decoration: none;">
+                                [people.Email]
+                            </span>
+                        </a>
+                    </span>
+
+                    <p style="margin-top:14px; padding-bottom: 0px; margin-bottom: 0px;">
+                        <span style="FONT-SIZE: 14pt;COLOR: #1D2248;  line-height: 14pt;">
+                            <strong>
+                                Company address
+                            </strong>
+                            <br>
+                        </span>
+                        <span style="FONT-SIZE: 14pt;  line-height: 14pt;">
+                            <span>
+                                [people.Adres]
+                            </span>
+                        </span>
+                    </p>
+                    
+                    <p>
+                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
+                            <a href="http://www.HINTHERO.com" target="_blank" rel="noopener"
+                                style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:14pt;">
+                                <strong>www.HINTHERO.com</strong>
+                            </a>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            
+
+            <tr>
+                <td colspan="3" style="height: 10px;">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <table cellspacing="0" cellpadding="0" order="0"
+        style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
+        <thead>
+            <tr>
+                <td style="width:20%"></td>
+                <td></td> 
+            </tr> 
+        </thead>
+        <tbody>
+            <tr width="100%">
+
+                <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="50%">
+                    <a href="https://hinthero.ru/" target="_blank" rel="noopener">
+                        <img order="0"
+                            alt="Banner"   style="display:block; max-width: 250px; height: auto;"
+                            src="https://i.ibb.co/f9WTy1v/Logo.png">
+                    </a>
+                </td>
+                <td colspan="3" style="font-size:11pt; margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-left:10px;" width="50%">
+                    Expertise in the selection of IT specialist and the formation of IT teams since 2010
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
