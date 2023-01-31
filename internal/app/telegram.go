@@ -84,25 +84,85 @@ func StartBot() {
 		switch update.Message.Command() {
 		case "start":
 			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, `Привет! Я бот, который поможет тебе собрать подпись. Необходимо передать:
-			- Имя Фамилия
-			- Должность
-			- e-mail
-			- Адрес
-			- Ник в телеграм
-			- Номер на вотсап
-			> Фото человека`))
+- Имя Фамилия
+- Должность
+- e-mail
+- Адрес
+- Ник в телеграм
+- Номер на вотсап
+> Фото человека`))
 		case "example":
-			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "Вот в таком формате Вам необходимо отправить мне данные:"))
+			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "Это прмиер сообщения, которое я пойму. Пришли мне подобное. Я жду картинку с 6 строками.\nВот в таком формате Вам необходимо отправить мне данные:"))
 
-			//bot.Send(tgbotapi.NewDocument(update.Message.Chat.ID, tgbotapi.FileBytes{Name: "roma.txt", Bytes: b}))
-			bot.Send(tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.RequestFileData{}))
-			/*`Роман Блинов
-			Студент
-			romanblinov2013@yandex.ru
-			Россия, Москва, 2-я Бауманская улица, 5, стр. 1
-			rb_pro
-			79269755457`*/
+			// Отправить картинку
+			photo := tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.FilePath("roma.jpeg"))
+			msgM, err := bot.Send(photo)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+
+			// Редактировать сообщение, добавив текст
+			msgME := tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, `Роман Блинов
+Студент
+romanblinov2013@yandex.ru
+Россия, Москва, 2-я Бауманская улица, 5, стр. 1
+rb_pro
+9269755457`)
+			_, err = bot.Send(msgME)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
 			continue
+
+		case "using":
+			// Отправить картинку
+			photo := tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.FilePath("pp1.png"))
+			msgM, err := bot.Send(photo)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+			// Редактировать сообщение, добавив текст
+			msgME := tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, "Пример того, как нужно загружать подпись на Яндекс почту.\nПереходим в настройки подписей(Все настройки > Личные данные)")
+			_, err = bot.Send(msgME)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+
+			// Отправить картинку
+			photo = tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.FilePath("pp2.png"))
+			msgM, err = bot.Send(photo)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+			// Редактировать сообщение, добавив текст
+			msgME = tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, "Правой кнопкой по форме \"Ваши подписи\" > \"Исследовать элемеент\"")
+			_, err = bot.Send(msgME)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+
+			// Отправить картинку
+			photo = tgbotapi.NewPhoto(update.Message.Chat.ID, tgbotapi.FilePath("pp3.png"))
+			msgM, err = bot.Send(photo)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+			// Редактировать сообщение, добавив текст
+			msgME = tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, "Находим тег <br>, правой кнопкой мыши \"Редактировать как HTML\" и вставляем файл, который Вам прислал ранее я :)")
+			_, err = bot.Send(msgME)
+			if err != nil {
+				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
+				continue
+			}
+			continue
+
 		default:
 			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "Я не знаю такую команду\nПопробуй /start"))
 			continue
