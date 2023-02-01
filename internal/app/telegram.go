@@ -159,7 +159,7 @@ func StartBot() {
 romanblinov2013@yandex.ru
 Россия, Москва, 2-я Бауманская улица, 5, стр. 1
 rb_pro
-9269755457`)
+79269755457`)
 			_, err = bot.Send(msgME)
 			if err != nil {
 				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
