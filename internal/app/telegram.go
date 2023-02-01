@@ -1,7 +1,6 @@
 package app
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -97,7 +96,7 @@ func StartBot() {
 			if imgbb_error != nil {
 				log.Println("Ошибка:", uploadError.Error())
 			}
-			fmt.Printf("%#v", respUpload)
+			//fmt.Printf("%#v", respUpload)
 			if respUpload.Status != http.StatusOK { // проверка на отрицательный ответ
 				log.Println("Ошибка:", respUpload.Error.Message)
 			}
@@ -176,7 +175,7 @@ rb_pro
 				continue
 			}
 			// Редактировать сообщение, добавив текст
-			msgME := tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, "Пример того, как нужно загружать подпись на Яндекс почту.\nПереходим в настройки подписей(Все настройки > Личные данные)")
+			msgME := tgbotapi.NewEditMessageCaption(update.Message.Chat.ID, msgM.MessageID, "Пример того, как нужно загружать подпись на Яндекс почту.\nМожешь ещё посмотреть видео https://youtu.be/KmjMlDKbFkE\nПереходим в настройки подписей(Все настройки > Личные данные)")
 			_, err = bot.Send(msgME)
 			if err != nil {
 				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
