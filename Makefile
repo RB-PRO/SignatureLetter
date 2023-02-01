@@ -34,4 +34,4 @@ build-linux-windows:
 	export GOARCH=amd64
 	export GOOS=windows
 	go env GOOS GOARCH
-	go build ./cmd/main/main.go  
+	go build ./cmd/main/main.go
