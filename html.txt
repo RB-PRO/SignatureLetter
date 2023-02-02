@@ -75,11 +75,10 @@
                         <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
                             <a href="http://www.HINTHERO.com" target="_blank" rel="noopener"
                                 style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
-                                <strong>http://www.HINTHERO.com</strong>
+                                <strong>www.HintHero.com</strong>
                             </a>
                         </span>
-                    </p>
-                    <p>
+                        &nbsp;&nbsp;&nbsp;
                         <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
                             <a href="[people.Site]" target="_blank" rel="noopener"
                                 style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
@@ -97,13 +96,13 @@
             -->
         </tbody>
     </table>
-    <table vertical-align="bottom" cellspacing="0" cellpadding="0" order="0" style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
+    <table vertical-align="bottom" cellspacing="0" cellpadding="0" order="0" style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; width:440px;">
         <thead>
             <tr width="100%">
-                <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="170px">
+                <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="40%">
                     <a href="https://hinthero.ru/" target="_blank" rel="noopener">
                         <img order="0"
-                            alt="Banner"   style="display:block; max-width: 170px; height: auto;"
+                            alt="Banner"   style="display:block; max-width: 100%; height: auto;"
                             src="https://i.ibb.co/f9WTy1v/Logo.png">
                     </a>
                 </td>
