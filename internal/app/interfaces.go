@@ -10,7 +10,7 @@ import (
 // Перевести входную строку в структуру
 func InputStrToPeople(str string) (signature.People, error) {
 	strs := strings.Split(str, "\n")
-	if len(strs) != 6 {
+	if len(strs) != 7 {
 		return signature.People{}, errors.New("неверный ввод данных")
 	}
 	var peop signature.People
@@ -21,5 +21,6 @@ func InputStrToPeople(str string) (signature.People, error) {
 	peop.Adres = strs[3]    // - Адрес
 	peop.Telegram = strs[4] // - Ник в телеграм
 	peop.Whatsapp = strs[5] // - Номер на вотсап (79269755457 )
+	peop.Site = strs[6]     // - Ссылка на сайт
 	return peop, nil
 }

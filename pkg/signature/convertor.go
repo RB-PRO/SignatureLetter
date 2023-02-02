@@ -14,6 +14,7 @@ type People struct {
 	Adres    string // - Адрес
 	Telegram string // - Ник в телеграм
 	Whatsapp string // - Номер на вотсап (79269755457 )
+	Site     string // - Ссылка на сайт
 	Image    string // - Ссылка на фото
 }
 
@@ -45,6 +46,9 @@ func (people People) Сonvertor() ([]byte, error) {
 	strHTML = strings.ReplaceAll(strHTML, "[people.Image]", people.Image)
 	strHTML = strings.ReplaceAll(strHTML, "[people.Telegram]", people.Telegram)
 	strHTML = strings.ReplaceAll(strHTML, "[people.Whatsapp]", people.Whatsapp)
+	people.Site = strings.ReplaceAll(people.Site, "https://", "")
+	people.Site = strings.ReplaceAll(people.Site, "http://", "")
+	strHTML = strings.ReplaceAll(strHTML, "[people.Site]", people.Site)
 
 	return []byte(strHTML), nil
 }

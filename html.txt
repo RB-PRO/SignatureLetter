@@ -17,17 +17,17 @@
                     </p>
 
                     <div>
-                        <div style="float: left; padding-left:16px; padding-right:2px;">
+                        <div style="float: left; padding-left:23px; padding-right:2px;">
                             <a href="https://t.me/[people.Telegram]" target="_blank" rel="noopener">
                                 <img order="0" alt="Telegram"
-                                    style="border:0; height:40px; width:40px"
+                                    style="border:0; height:30px; width:30px"
                                     src="https://i.ibb.co/DKt9N9V/Telegram.png">
                             </a>
                         </div>
-                        <div style="float: right; padding-left:2px; padding-right:16px;">
+                        <div style="float: right; padding-left:2px; padding-right:23px;">
                             <a href="https://wa.me/[people.Whatsapp]" target="_blank" rel="noopener">
                                 <img order="0" alt="WhatsApp"
-                                    style="border:0; height:40px; width:40px"
+                                    style="border:0; height:30px; width:30px"
                                     src="https://i.ibb.co/TT91XMf/WhatsApp.png">
                             </a>
                         </div>
@@ -75,7 +75,15 @@
                         <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
                             <a href="http://www.HINTHERO.com" target="_blank" rel="noopener"
                                 style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
-                                <strong>www.HINTHERO.com</strong>
+                                <strong>http://www.HINTHERO.com</strong>
+                            </a>
+                        </span>
+                    </p>
+                    <p>
+                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
+                            <a href="[people.Site]" target="_blank" rel="noopener"
+                                style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
+                                <strong>[people.Site]</strong>
                             </a>
                         </span>
                     </p>
@@ -89,18 +97,20 @@
             -->
         </tbody>
     </table>
-    <table cellspacing="0" cellpadding="0" order="0" style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
+    <table vertical-align="bottom" cellspacing="0" cellpadding="0" order="0" style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
         <thead>
             <tr width="100%">
-                <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="50%">
+                <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="170px">
                     <a href="https://hinthero.ru/" target="_blank" rel="noopener">
                         <img order="0"
-                            alt="Banner"   style="display:block; max-width: 250px; height: auto;"
+                            alt="Banner"   style="display:block; max-width: 170px; height: auto;"
                             src="https://i.ibb.co/f9WTy1v/Logo.png">
                     </a>
                 </td>
-                <td colspan="3" style="font-size:8pt; margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-left:10px;" width="50%">
-                    Expertise in the selection of IT specialist and the formation of IT teams since 2010
+                <td valign="bottom" colspan="3" style="font-size:8pt;  border-top:2px solid #03b500; " >
+                    <p>
+                        Expertise in the selection of IT specialist <br>and the formation of IT teams since 2010
+                    </p>
                 </td>
             </tr>
 
@@ -115,14 +125,14 @@
         <tbody>
             <tr width="100%">
                 <td colspan="3" style="margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-right:10px;" width="50%">
-                    <a href="https://hinthero.ru/" target="_blank" rel="noopener">
+                    <a href="https://hinthero.com/" target="_blank" rel="noopener">
                         <img order="0"
-                            alt="Banner"   style="display:block; max-width: 250px; height: auto;"
+                            alt="Banner" style="display:block; max-width: 250px; height: auto;"
                             src="https://i.ibb.co/f9WTy1v/Logo.png">
                     </a>
                 </td>
                 <td colspan="3" style="font-size:11pt; margin: 5px; border-top:2px solid #03b500; padding-top:5px; padding-left:10px;" width="50%">
-                    Expertise in the selection of IT specialist and the formation of IT teams since 2010
+                    Expertise in the selection of IT specialist <br>and the formation of IT teams since 2010
                 </td>
             </tr>
         </tbody>

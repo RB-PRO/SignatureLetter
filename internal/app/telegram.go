@@ -140,6 +140,7 @@ func StartBot() {
 - Адрес
 - Ник в телеграм
 - Номер на вотсап
+- Ссылка на сайт
 > Фото человека`))
 		case "example":
 			bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, "Это прмиер сообщения, которое я пойму. Пришли мне подобное. Я жду картинку с 6 строками.\nВот в таком формате Вам необходимо отправить мне данные:"))
@@ -158,7 +159,8 @@ func StartBot() {
 romanblinov2013@yandex.ru
 Россия, Москва, 2-я Бауманская улица, 5, стр. 1
 rb_pro
-79269755457`)
+79269755457
+https://vk.com/rb_pro`)
 			_, err = bot.Send(msgME)
 			if err != nil {
 				bot.Send(tgbotapi.NewMessage(update.Message.Chat.ID, err.Error()))
