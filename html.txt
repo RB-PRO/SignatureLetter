@@ -3,7 +3,7 @@
         style="FONT-FAMILY: Tahoma, sans-serif; COLOR: #3a4345; max-width:600px;">
         <thead>
             <tr>
-                <td style="width:135px"></td>
+                <td style="width:100px"></td>
                 <td></td> 
             </tr>
         </thead>
@@ -15,23 +15,6 @@
                             src="[people.Image]">
                         <br>
                     </p>
-
-                    <div>
-                        <div style="float: left; padding-left:23px; padding-right:2px;">
-                            <a href="https://t.me/[people.Telegram]" target="_blank" rel="noopener">
-                                <img order="0" alt="Telegram"
-                                    style="border:0; height:30px; width:30px"
-                                    src="https://i.ibb.co/DKt9N9V/Telegram.png">
-                            </a>
-                        </div>
-                        <div style="float: right; padding-left:2px; padding-right:23px;">
-                            <a href="https://wa.me/[people.Whatsapp]" target="_blank" rel="noopener">
-                                <img order="0" alt="WhatsApp"
-                                    style="border:0; height:30px; width:30px"
-                                    src="https://i.ibb.co/TT91XMf/WhatsApp.png">
-                            </a>
-                        </div>
-                    </div>
                 </td>
                 <td valign="top" style="FONT-FAMILY: Roboto, sans-serif; line-height:14pt; padding-bottom:0px; margin: 10px;">
                     <p style="FONT-SIZE: 14pt; COLOR: #03b500; FONT-FAMILY: Tahoma, sans-serif; margin-bottom: 0px; padding-bottom: 10px;">
@@ -71,21 +54,44 @@
                         </span>
                     </p>
                     
-                    <p>
-                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
+                </td>
+            </tr>
+            <tr stype="line-height: 14px;">
+                <td  style="padding-bottom: 0px; margin-bottom: 0px;">
+                    <div>
+                        <div style="float: left; padding-left:23px; padding-right:2px;">
+                            <a href="https://t.me/[people.Telegram]" target="_blank" rel="noopener">
+                                <img order="0" alt="Telegram"
+                                    style="border:0; height:33px; width:33px"
+                                    src="https://i.ibb.co/DKt9N9V/Telegram.png">
+                            </a>
+                        </div>
+                        <div style="float: right; padding-left:2px; padding-right:23px;">
+                            <a href="https://wa.me/[people.Whatsapp]" target="_blank" rel="noopener">
+                                <img order="0" alt="WhatsApp"
+                                    style="border:0; height:33px; width:33px"
+                                    src="https://i.ibb.co/TT91XMf/WhatsApp.png">
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px;">
                             <a href="http://www.HINTHERO.com" target="_blank" rel="noopener"
                                 style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
                                 <strong>www.HintHero.com</strong>
                             </a>
                         </span>
                         &nbsp;&nbsp;&nbsp;
-                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px; width: 285px;">
+                        <span valign="bottom" style="FONT-FAMILY: Tahoma, sans-serif; line-height:15px; padding-bottom:0px;">
                             <a href="[people.Site]" target="_blank" rel="noopener"
                                 style="text-decoration:none;color:#03b500; font-family:Tahoma, sans-serif; font-size:9pt;">
                                 <strong>[people.Site]</strong>
                             </a>
                         </span>
-                    </p>
+                    </div>
+
                 </td>
             </tr>
             <!--
