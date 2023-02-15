@@ -1,8 +1,6 @@
 package app
 
 import (
-	"bufio"
-	"encoding/base64"
 	"io"
 	"net/http"
 	"os"
@@ -27,30 +25,6 @@ func dataFile(filename string) (string, error) {
 	fileToken.Close() // Закрытие файла
 
 	return string(data[:n]), nil
-}
-
-// Convert Picture in base64
-func PicToBase64(filename string) (string, error) {
-	imgFile, err := os.Open(filename)
-	if err != nil {
-		return "", err
-	}
-	defer imgFile.Close()
-
-	fInfo, fInfoError := imgFile.Stat()
-	if fInfoError != nil {
-		return "", fInfoError
-	}
-	var size int64 = fInfo.Size()
-	buf := make([]byte, size)
-
-	fReader := bufio.NewReader(imgFile)
-	_, ReadError := fReader.Read(buf)
-	if ReadError != nil {
-		return "", ReadError
-	}
-
-	return base64.StdEncoding.EncodeToString(buf), nil
 }
 
 // Скачать файл по ссылке

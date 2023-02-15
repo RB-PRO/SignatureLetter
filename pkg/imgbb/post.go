@@ -1,10 +1,13 @@
 package imgbb
 
 import (
+	"bufio"
+	"encoding/base64"
 	"encoding/json"
 	"io"
 	"net/http"
 	"net/url"
+	"os"
 )
 
 const URL string = "https://api.imgbb.com/1/upload"
@@ -84,4 +87,28 @@ func (img ImgbbUser) Upload(pictureBase64, name string) (ImgbbResponse, error) {
 	}
 
 	return imgbbRes, responseError
+}
+
+// Convert Picture in base64
+func PicToBase64(filename string) (string, error) {
+	imgFile, err := os.Open(filename)
+	if err != nil {
+		return "", err
+	}
+	defer imgFile.Close()
+
+	fInfo, fInfoError := imgFile.Stat()
+	if fInfoError != nil {
+		return "", fInfoError
+	}
+	var size int64 = fInfo.Size()
+	buf := make([]byte, size)
+
+	fReader := bufio.NewReader(imgFile)
+	_, ReadError := fReader.Read(buf)
+	if ReadError != nil {
+		return "", ReadError
+	}
+
+	return base64.StdEncoding.EncodeToString(buf), nil
 }

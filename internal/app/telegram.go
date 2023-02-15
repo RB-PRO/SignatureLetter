@@ -85,7 +85,7 @@ func StartBot() {
 			}
 
 			// Переводим локальную картинку в base64
-			picBase64, baseError := PicToBase64("main.png")
+			picBase64, baseError := imgbb.PicToBase64("main.png")
 			if baseError != nil {
 				log.Println("Ошибка:", baseError)
 			}
@@ -102,7 +102,7 @@ func StartBot() {
 			}
 
 			signaturePeople.Image = respUpload.Data.Image.URL // Ссылка с сервиса картинок
-			signaturePeople.Image = DirectURL                 // Ссылка с телеграма
+			//signaturePeople.Image = DirectURL                 // Ссылка с телеграма
 
 			log.Printf("Пользователь %s забил структуру: %#v\n", update.Message.Chat.UserName, signaturePeople)
 
